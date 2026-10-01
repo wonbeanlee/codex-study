@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#103e40">
+  <meta name="description" content="배움을 즐기고, 작은 아이디어를 현실로 만드는 이원빈의 소개 페이지입니다.">
+  <title>이원빈 | 작은 아이디어, 새로운 가능성</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 40px 24px;
+      background:
+        radial-gradient(ellipse at 12% 12%, #79bfb052, transparent 55%),
+        radial-gradient(ellipse at 90% 85%, #c6c79c35, transparent 50%),
+        linear-gradient(135deg, #102f34 0%, #1d5555 52%, #39736b 100%);
+      color: #e3eee5;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .profile {
+      width: 100%;
+      max-width: 880px;
+      position: relative;
+      overflow: hidden;
+      padding: 36px 64px 32px;
+      border: 1px solid #b6ddd533;
+      border-radius: 24px;
+      background: linear-gradient(125deg, #153f43ed, #10383bd9);
+      box-shadow: 0 32px 100px #061d3440, inset 0 1px 0 #c0e9d90d;
+      text-align: left;
+    }
+
+    .profile::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -190px;
+      top: 95px;
+      border: 1px solid #a2d6c526;
+      border-radius: 50%;
+      box-shadow: 0 0 0 45px #a2d6c508, 0 0 0 90px #a2d6c506;
+      pointer-events: none;
+    }
+
+    .topline, .bottomline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #afc9c2;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+    }
+
+    .topline { padding-bottom: 26px; border-bottom: 1px solid #b6ddd526; }
+    .monogram { color: #e0e9d6; font-family: Georgia, serif; font-size: 22px; font-style: italic; letter-spacing: -0.07em; }
+    .content { position: relative; padding: 62px 0 56px; }
+
+    .symbol {
+      position: absolute;
+      right: 8px;
+      top: 64px;
+      color: #98c9b3;
+      font-size: 76px;
+      line-height: 1;
+      transform: rotate(12deg);
+    }
+
+    .greeting {
+      margin: 0 0 24px;
+      color: #b2cdc6;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Batang", "AppleMyungjo", "Noto Serif CJK KR", serif;
+      font-size: clamp(56px, 10vw, 88px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.07em;
+    }
+
+    .english-name {
+      margin: 14px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: clamp(23px, 4vw, 32px);
+      color: #8fc7b7;
+      letter-spacing: -0.025em;
+    }
+
+    .intro {
+      max-width: 440px;
+      margin: 30px 0 32px;
+      color: #b9cdc5;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 42px;
+      min-height: 56px;
+      padding: 16px 24px;
+      border: 1px solid #badbcb;
+      border-radius: 8px;
+      background: #b9d9c5;
+      color: #143d38;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .contact span { display: inline-block; transition: transform 0.25s; font-size: 20px; }
+    @media (hover: hover) {
+      .contact:hover {
+        background: #d0e7d7;
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px #041f343d;
+      }
+      .contact:hover span { transform: translate(3px, -3px); }
+    }
+    .contact:active { transform: translateY(0); }
+    .contact:focus-visible {
+      outline: 3px solid #b9d9c5;
+      outline-offset: 5px;
+    }
+
+    .bottomline { border-top: 1px solid #b6ddd526; padding-top: 24px; }
+    .email { font-size: 12px; letter-spacing: 0.03em; }
+
+    @media (max-width: 480px) {
+      body { padding: 20px 16px; }
+      .profile { padding: 24px; border-radius: 18px; }
+      .content { padding: 48px 0 40px; }
+      .symbol { font-size: 44px; top: 90px; right: 0; }
+      .intro { font-size: 15px; }
+      .contact { width: 100%; justify-content: space-between; }
+      .bottomline { flex-wrap: wrap; gap: 12px; }
+      .topline { letter-spacing: 0.1em; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .contact, .contact span { transition: none; }
+      .contact:hover, .contact:hover span { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile" aria-labelledby="name">
+    <div class="topline"><span class="monogram" aria-hidden="true">W.</span><span>A LITTLE ABOUT ME</span></div>
+    <div class="content">
+      <div class="symbol" aria-hidden="true">✳</div>
+      <p class="greeting">안녕하세요, 반갑습니다.</p>
+      <h1 id="name">이원빈</h1>
+      <p class="english-name" lang="en">Lee Wonbin</p>
+      <p class="intro">배움을 즐기고, 작은 아이디어를 현실로 만드는 사람입니다.</p>
+      <a class="contact" href="mailto:lwb1217@gmail.com">
+        연락하기 <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="bottomline"><span>작은 아이디어, 새로운 가능성.</span><span class="email">lwb1217@gmail.com</span></div>
+  </main>
+</body>
+</html>
